@@ -10,7 +10,6 @@ const ref = {
   minutesCount: document.querySelector('[data-minutes]'),
   secondsCount: document.querySelector('[data-seconds]'),
 };
-console.log(ref.inputData);
 const options = {
   enableTime: true,
   time_24hr: true,
