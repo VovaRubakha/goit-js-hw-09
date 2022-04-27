@@ -5,7 +5,7 @@ ref = {
   startBtn: document.querySelector(`button[data-start]`),
   stopBtn: document.querySelector(`button[data-stop]`),
 };
-let intervalIl;
+let intervalId = null;
 function onStartChangeColor() {
   intervalId = setInterval(() => {
     document.body.style.backgroundColor = getRandomHexColor();
