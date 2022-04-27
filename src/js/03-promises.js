@@ -1,7 +1,7 @@
 import { Notify } from 'notiflix';
 
 const formRef = document.querySelector(`.form`);
-
+console.log(formRef);
 function onSubmit(e) {
   e.preventDefault();
 
