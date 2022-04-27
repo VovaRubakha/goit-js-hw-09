@@ -20,7 +20,6 @@ const options = {
     if (selectedDates[0].getTime() > Date.now()) {
       ref.btnStart.removeAttribute('disabled');
       Notify.success(`It's a valid date))`);
-
       return;
     }
     ref.btnStart.setAttribute('disabled', 'disabled');
@@ -48,24 +47,6 @@ function onClickTimer() {
     init(intervalTime);
   }, 1000);
 }
-
-// function onClickTimer() {
-//   intervalId = setInterval(eventCounter, 1000);
-//   Notify.success(`Your counter was started`);
-//   ref.btnStart.setAttribute('disabled', 'disabled');
-// }
-
-// function eventCounter() {
-//   const data = new Date(ref.inputData.value);
-//   const intervalTime = convertMs(data - Date.now());
-
-//   if (data < Date.now()) {
-//     clearInterval(intervalId);
-//     return ref.btnStart.removeAttribute('disabled'), init();
-//   }
-
-//   init(intervalTime);
-// }
 
 function init(time = { days: 0, hours: 0, minutes: 0, seconds: 0 }) {
   ref.daysCount.textContent = `${time.days}`.padStart(2, 0);
